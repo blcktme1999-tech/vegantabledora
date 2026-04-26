@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>專業素食餐廳媒合與推廣 - 蔬食合作專家</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary-green: #2D5A27;
+            --accent-gold: #D9AC48;
+            --earth-light: #F8F9F5;
+            --text-dark: #202020;
+        }
+
+        body {
+            font-family: 'Poppins', 'Microsoft JhengHei', sans-serif;
+            color: var(--text-dark);
+            background-color: white;
+            scroll-behavior: smooth;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+        }
+
+        .nav-blur {
+            backdrop-filter: blur(8px);
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .kuse-branding {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 14px;
+        }
+
+        .kuse-branding:hover {
+            color: var(--primary-green);
+        }
+
+        .kuse-branding svg {
+            height: 1.2em;
+        }
+
+        .floating-cta {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        @media print {
+            .no-print { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 nav-blur border-b border-[rgba(32,32,32,0.08)]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-[#2D5A27] rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold">V</span>
+                    </div>
+                    <span class="text-xl font-bold text-[#2D5A27] tracking-tight">素食媒合專家</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-sm font-medium hover:text-[#2D5A27] transition-colors">關於我們</a>
+                    <a href="#offers" class="text-sm font-medium hover:text-[#2D5A27] transition-colors">專屬優惠</a>
+                    <a href="#why-us" class="text-sm font-medium hover:text-[#2D5A27] transition-colors">合作優勢</a>
+                    <a href="https://manager.line.biz/account/@380kjqin" class="rounded-[8px] bg-[#202020] text-white px-5 py-2 hover:bg-[#4D4D4D] transition-all text-sm">立即諮詢</a>
+                </div>
+                <div class="md:hidden">
+                    <a href="https://manager.line.biz/account/@380kjqin" class="text-[#2D5A27]">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <img src="https://api.kuse.ai/api/folder/v1/file/cbf80d608c3d658be632efa84373f196983385c85718eb2e062b7376faff5d9a_3283066.jpeg" alt="Vegetarian Gourmet" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 hero-gradient"></div>
+        <div class="relative z-10 text-center px-4 max-w-4xl">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">專業素食餐廳<br><span class="text-[#FFCC5D]">媒合與推廣專家</span></h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto font-light">
+                我們致力於連結優質素食餐廳與美食愛好者。透過專業的業配媒合，為餐廳帶來精準流量，為食客提供專屬優惠。
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="https://manager.line.biz/account/@380kjqin" class="w-full sm:w-auto px-8 py-4 bg-[#00B900] text-white rounded-[12px] font-bold text-lg flex items-center justify-center gap-2 hover:scale-105 transition-transform shadow-lg">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" class="w-6 h-6 brightness-0 invert" alt="Line">
+                    加入 LINE 立即領取優惠
+                </a>
+                <a href="#offers" class="w-full sm:w-auto px-8 py-4 bg-white/10 backdrop-blur-md text-white border border-white/30 rounded-[12px] font-medium hover:bg-white/20 transition-all">
+                    查看合作方案
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="w-full lg:w-1/2">
+                    <div class="relative">
+                        <img src="https://api.kuse.ai/api/folder/v1/file/4ee5fb9c4619f4fd17b4fa1fb0f23cc8878600e5d3388778fe826d6a79b5e44f_3283068.jpeg" alt="Partnership" class="rounded-[20px] shadow-2xl object-cover w-full h-[400px]">
+                        <div class="absolute -bottom-6 -right-6 bg-[#FFCC5D] p-8 rounded-[16px] hidden md:block">
+                            <p class="text-4xl font-bold text-[#202020]">100+</p>
+                            <p class="text-sm font-medium opacity-80">合作素食品牌</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <span class="text-[#2D5A27] font-bold tracking-widest uppercase text-sm mb-4 block">About Us 關於我們</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-[#202020]">專注素食推廣，<br>打造綠色美食新高度</h2>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        我們是一個專門經營素食餐廳業配的專業單位。深知素食市場的獨特性，我們不只是介紹食物，更是傳達一種健康、永續的生活態度。
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex gap-4 items-start">
+                            <div class="w-10 h-10 rounded-full bg-[#F8F9F5] flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 text-[#2D5A27]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-[#202020]">專業內容創作</h4>
+                                <p class="text-sm text-gray-500">深入挖掘餐廳特色與故事</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <div class="w-10 h-10 rounded-full bg-[#F8F9F5] flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 text-[#2D5A27]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-[#202020]">精準客群觸及</h4>
+                                <p class="text-sm text-gray-500">直達百萬素食愛好者社群</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coupons Section -->
+    <section id="offers" class="py-20 bg-[#F8F9F5]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">獨家合作優惠券</h2>
+            <p class="text-gray-500 max-w-2xl mx-auto">只要透過我們的推薦前往用餐，即可享受合作餐廳提供的專屬折扣與禮遇。</p>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Coupon 1 -->
+                <div class="rounded-[16px] border-[2px] border-[rgba(32,32,32,0.08)] bg-white p-6 card-hover relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-[#FFCC5D] px-4 py-1 rounded-bl-[12px] text-xs font-bold">熱門推薦</div>
+                    <div class="mb-6">
+                        <span class="text-[#2D5A27] font-bold text-lg">全單 85 折</span>
+                        <h3 class="text-xl font-bold mt-2">連鎖精品蔬食館</h3>
+                    </div>
+                    <ul class="text-sm text-gray-500 space-y-3 mb-8 text-left">
+                        <li class="flex items-center gap-2">✓ 平假日皆可使用</li>
+                        <li class="flex items-center gap-2">✓ 出示 LINE 畫面即可</li>
+                        <li class="flex items-center gap-2">✓ 適用於全台分店</li>
+                    </ul>
+                    <a href="https://manager.line.biz/account/@380kjqin" class="block w-full text-center py-3 bg-[#202020] text-white rounded-[8px] hover:bg-[#4D4D4D] transition-colors font-medium">索取優惠券</a>
+                </div>
+                <!-- Coupon 2 -->
+                <div class="rounded-[16px] border-[2px] border-[rgba(32,32,32,0.08)] bg-white p-6 card-hover">
+                    <div class="mb-6">
+                        <span class="text-[#2D5A27] font-bold text-lg">贈送主廚私房菜</span>
+                        <h3 class="text-xl font-bold mt-2">私宅素食無菜單</h3>
+                    </div>
+                    <ul class="text-sm text-gray-500 space-y-3 mb-8 text-left">
+                        <li class="flex items-center gap-2">✓ 需提前兩日預約</li>
+                        <li class="flex items-center gap-2">✓ 雙人套餐起適用</li>
+                        <li class="flex items-center gap-2">✓ 每日限量 10 組</li>
+                    </ul>
+                    <a href="https://manager.line.biz/account/@380kjqin" class="block w-full text-center py-3 bg-[#202020] text-white rounded-[8px] hover:bg-[#4D4D4D] transition-colors font-medium">索取優惠券</a>
+                </div>
+                <!-- Coupon 3 -->
+                <div class="rounded-[16px] border-[2px] border-[rgba(32,32,32,0.08)] bg-white p-6 card-hover">
+                    <div class="mb-6">
+                        <span class="text-[#2D5A27] font-bold text-lg">滿千折兩百</span>
+                        <h3 class="text-xl font-bold mt-2">異國風味蔬食吧</h3>
+                    </div>
+                    <ul class="text-sm text-gray-500 space-y-3 mb-8 text-left">
+                        <li class="flex items-center gap-2">✓ 限定內用使用</li>
+                        <li class="flex items-center gap-2">✓ 酒水除外皆可折抵</li>
+                        <li class="flex items-center gap-2">✓ 每桌限用一張</li>
+                    </ul>
+                    <a href="https://manager.line.biz/account/@380kjqin" class="block w-full text-center py-3 bg-[#202020] text-white rounded-[8px] hover:bg-[#4D4D4D] transition-colors font-medium">索取優惠券</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">為什麼選擇我們？</h2>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- For Restaurants -->
+                <div class="bg-[#2D5A27] rounded-[24px] p-10 text-white relative overflow-hidden">
+                    <div class="relative z-10">
+                        <span class="bg-white/20 px-4 py-1 rounded-full text-xs font-bold mb-6 inline-block uppercase tracking-wider">For Restaurants</span>
+                        <h3 class="text-2xl font-bold mb-6">對餐廳經營者</h3>
+                        <div class="space-y-6">
+                            <div class="flex gap-4">
+                                <div class="bg-white/10 p-3 rounded-lg"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg></div>
+                                <div><h5 class="font-bold">品牌曝光提升</h5><p class="text-sm opacity-80 mt-1">精確鎖定素食族群，增加餐廳入店率</p></div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="bg-white/10 p-3 rounded-lg"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg></div>
+                                <div><h5 class="font-bold">高品質內容呈現</h5><p class="text-sm opacity-80 mt-1">專業攝影與文案，打造誘人的美食視覺</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-white/5 rounded-full"></div>
+                </div>
+                <!-- For Foodies -->
+                <div class="bg-[#F8F9F5] border border-[rgba(32,32,32,0.08)] rounded-[24px] p-10 relative overflow-hidden">
+                    <div class="relative z-10">
+                        <span class="bg-[#2D5A27]/10 text-[#2D5A27] px-4 py-1 rounded-full text-xs font-bold mb-6 inline-block uppercase tracking-wider">For Foodies</span>
+                        <h3 class="text-2xl font-bold mb-6">對美食愛好者</h3>
+                        <div class="space-y-6">
+                            <div class="flex gap-4">
+                                <div class="bg-[#2D5A27]/10 p-3 rounded-lg text-[#2D5A27]"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
+                                <div><h5 class="font-bold">節省探店成本</h5><p class="text-sm text-gray-500 mt-1">獨家折扣碼，享受美味不傷荷包</p></div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="bg-[#2D5A27]/10 p-3 rounded-lg text-[#2D5A27]"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg></div>
+                                <div><h5 class="font-bold">真實無雷評論</h5><p class="text-sm text-gray-500 mt-1">嚴格篩選合作餐廳，保證餐點品質</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#202020] text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                            <span class="text-[#202020] font-bold">V</span>
+                        </div>
+                        <span class="text-xl font-bold tracking-tight">素食媒合專家</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-sm">致力於讓素食成為生活中的美好選擇。透過專業媒合，創造餐廳與食客的雙贏可能。</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#2D5A27] transition-all"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z"></path></svg></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#2D5A27] transition-all"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">快速連結</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li><a href="#about" class="hover:text-white transition-colors">關於我們</a></li>
+                        <li><a href="#offers" class="hover:text-white transition-colors">優惠券</a></li>
+                        <li><a href="#why-us" class="hover:text-white transition-colors">合作優勢</a></li>
+                        <li><a href="https://manager.line.biz/account/@380kjqin" class="hover:text-white transition-colors">聯繫客服</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">聯絡資訊</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f0939f9e84919384b0869597919edd958880958284de939f9d">[email&#160;protected]</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            週一至週五 09:00 - 18:00
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-xs text-gray-500">© 2024 素食媒合專家. All rights reserved.</p>
+                <a href="https://kuse.ai" class="kuse-branding" target="_blank">
+                    <span class="text-white/50">made with</span>
+                    <svg viewBox="0,0,160,44" xmlns="http://www.w3.org/2000/svg" class="text-white"><path d="m.01,20.65C-.43,8.25,9.3-2.03,22.04.34,34.78,2.72,43.29,8.32,43.29,22.9s-8.66,19.01-22.03,20.3C7.9,44.5.46,33.05.01,20.65z" fill="currentColor"/><path fill-rule="evenodd" clip-rule="evenodd" d="m146.76,7.94c8.07,0,13.24,6.15,13.24,14.58v1.39h-20.75c.45,4.05,3.51,7.37,8.57,7.37,2.62,0,5.73-1.05,7.62-2.94l2.67,3.83c-2.67,2.55-6.62,3.88-10.9,3.88-8.07,0-14.08-5.6-14.08-14.08,0-7.76,5.67-14.02,13.63-14.02zm0,4.77c-5.01,0-7.29,3.83-7.57,7.1h15.13c-.11-3.16-2.28-7.1-7.57-7.1z" fill="currentColor"/><path d="m86.64,24.49c0,4.15,2.39,6.84,6.84,6.84,4.4,0,6.84-2.69,6.84-6.84V8.55h5.37v16.33c0,6.7-4.06,11.14-12.21,11.14-8.21,0-12.21-4.5-12.21-11.09V8.55h5.37v15.94zm32.99-16.55c4.49,0,8.06,1.47,10.6,3.86l-2.59,3.81c-2.05-2-5.28-3.08-8.06-3.08-2.88,0-4.84,1.37-4.84,3.32,0,1.91,2.64,2.54,5.81,3.27,4.59,1.08,10.26,2.4,10.26,8.46,0,4.94-3.76,8.41-11.14,8.41-4.98,0-8.94-1.76-11.24-4.11l2.54-4.11c1.86,1.91,5.18,3.67,8.84,3.67,3.91,0,5.57-1.66,5.57-3.62,0-2.3-2.88-2.98-6.21-3.76-4.54-1.08-9.87-2.3-9.87-8.06,0-4.5,4.2-8.06,10.31-8.06zM60.79,20.82,71.44,8.55h6.5L66.46,21.26,78.82,35.44h-6.5l-9.28-11.1-2.25,2.49v8.6h-5.33V8.55h5.33v12.27z" fill="currentColor"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating CTA -->
+    <a href="https://manager.line.biz/account/@380kjqin" class="fixed bottom-8 right-8 z-40 bg-[#00B900] text-white p-4 rounded-full shadow-2xl floating-cta flex items-center gap-2 pr-6 no-print">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" class="w-8 h-8 brightness-0 invert" alt="Line">
+        <span class="font-bold hidden sm:inline">索取專屬優惠</span>
+    </a>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js" defer></script><script src="https://cdn.kuse.ai/sdk.prd.js"></script>
+    <script>
+        // Smooth scroll implementation
+        document.querySelectorAll(`a[href^="#"]`).forEach(anchor => {
+            anchor.addEventListener(`click`, function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute(`href`)).scrollIntoView({
+                    behavior: `smooth`
+                });
+            });
+        });
+
+        // Simple scroll reveal
+        const revealOnScroll = () => {
+            const reveals = document.querySelectorAll(`.card-hover`);
+            reveals.forEach(reveal => {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveal.getBoundingClientRect().top;
+                const elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveal.classList.add(`opacity-100`);
+                }
+            });
+        }
+
+        window.addEventListener(`scroll`, revealOnScroll);
+    </script>
+</body>
+</html></html>
